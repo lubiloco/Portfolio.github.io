@@ -1,8 +1,5 @@
 // Sample posts data
-let posts = [
-    { title: 'First Post', content: 'This is the content of the first post.' },
-    { title: 'Second Post', content: 'This is the content of the second post.' }
-];
+let posts = JSON.parse(localStorage.getItem('posts')) || [];
 
 // DOM elements
 const postsContainer = document.getElementById('posts');
@@ -17,6 +14,7 @@ newPostBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', outsideClick);
 postForm.addEventListener('submit', addPost);
+postsContainer.addEventListener('click', deletePost);
 
 // Display posts
 function displayPosts() {
@@ -28,6 +26,7 @@ function displayPosts() {
         postElement.innerHTML = `
             <h2>${post.title}</h2>
             <p>${post.content}</p>
+            <button class="delete-btn" data-index="${index}">Delete</button>
         `;
         postsContainer.appendChild(postElement);
     });
@@ -58,12 +57,28 @@ function addPost(e) {
     if (title.trim() && content.trim()) {
         const newPost = { title, content };
         posts.unshift(newPost); // Add new post to the beginning of the array
+        savePosts();
         displayPosts();
         closeModal();
         postForm.reset();
     } else {
         alert('Please fill in all fields.');
     }
+}
+
+// Delete post
+function deletePost(e) {
+    if (e.target.classList.contains('delete-btn')) {
+        const index = e.target.getAttribute('data-index');
+        posts.splice(index, 1);
+        savePosts();
+        displayPosts();
+    }
+}
+
+// Save posts to localStorage
+function savePosts() {
+    localStorage.setItem('posts', JSON.stringify(posts));
 }
 
 // Initial display
