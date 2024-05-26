@@ -1,0 +1,249 @@
+/* Existing styles... */
+
+/* Additional styles for project section */
+/* Reset some default styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #f4f4f4;
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header {
+	background-color: rgba(51, 51, 51, 0.9); /* Darkened header background */
+	color: #fff;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Ensure navigation is above other content */
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+	nav ul li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+		nav ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 18px;
+			transition: color 0.3s ease;
+			font-family: 'Montserrat', Arial, sans-serif;
+			font-weight: 500;
+		}
+
+			nav ul li a:hover {
+				color: #f0f0f0;
+			}
+
+section {
+	padding: 80px 20px;
+	text-align: center;
+}
+
+.section {
+	margin-top: 70px;
+	background-color: rgba(255, 255, 255, 0.9); /* Lightened section background */
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 40px;
+	transition: transform 0.3s ease;
+}
+
+	.section:hover {
+		transform: translateY(-10px);
+	}
+
+.image-container {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 20px;
+	overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	position: relative;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#profile-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	transition: transform 0.3s ease-in-out;
+}
+
+	#profile-img:hover {
+		transform: scale(1.1) rotate(360deg);
+	}
+
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1, h2 {
+	margin-bottom: 20px;
+	font-family: 'Poppins', Arial, sans-serif;
+	color: #333;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 700;
+	animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+h2 {
+	font-size: 2.5em;
+	font-weight: 600;
+	color: #555;
+}
+
+.tagline {
+	font-size: 1.8em;
+	color: #777;
+	margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+	/* Responsive adjustments */
+	.content {
+		padding: 0 40px;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+
+	h2 {
+		font-size: 3em;
+	}
+
+	.tagline {
+		font-size: 2em;
+	}
+}
+
+/* Additional styles for specific sections */
+
+#home {
+	background-image: linear-gradient(135deg, rgba(132, 250, 176, 0.8) 0%, rgba(143, 211, 244, 0.8) 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#about {
+	background-color: #f9f9f9;
+}
+
+#portfolio {
+	background-color: #f6f6f6;
+}
+
+#contact {
+	background-color: #f9f9f9;
+}
+
+/* Footer styles */
+
+footer {
+	background-color: rgba(51, 51, 51, 0.9);
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	position: relative;
+	clear: both;
+}
+
+	footer p {
+		margin: 0;
+	}
+
+	footer a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+		footer a:hover {
+			color: #f0f0f0;
+		}
+
+.project {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+}
+
+	.project:hover {
+		transform: translateY(-5px);
+	}
+
+	.project h3 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+
+	.project p {
+		color: #777;
+	}
+
+	.project a {
+		display: inline-block;
+		background-color: #555;
+		color: #fff;
+		text-decoration: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+		margin-top: 10px;
+	}
+
+		.project a:hover {
+			background-color: #333;
+		}
+
+/* Contact link styles */
+.contact-link {
+	color: #555;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+	.contact-link:hover {
+		color: #333;
+	}
