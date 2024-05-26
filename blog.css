@@ -19,22 +19,22 @@ header {
     text-align: center;
 }
 
-    header h1 {
-        margin: 0;
-    }
+header h1 {
+    margin: 0;
+}
 
-    header button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 10px;
-        cursor: pointer;
-    }
+header button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
 main {
     padding: 20px 0;
@@ -46,11 +46,27 @@ main {
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
 }
 
-    .post h2 {
-        margin-top: 0;
-    }
+.post h2 {
+    margin-top: 0;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: -40px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
 
 .modal {
     display: none;
@@ -81,30 +97,30 @@ main {
     cursor: pointer;
 }
 
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .form-group {
     margin-bottom: 10px;
 }
 
-    .form-group label {
-        display: block;
-        font-weight: bold;
-    }
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 button[type="submit"] {
     background-color: #4CAF50;
@@ -115,9 +131,9 @@ button[type="submit"] {
     border-radius: 5px;
 }
 
-    button[type="submit"]:hover {
-        background-color: #45a049;
-    }
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
 
 footer {
     background-color: #333;
@@ -129,14 +145,14 @@ footer {
     bottom: 0;
 }
 
-    footer a {
-        color: #4CAF50;
-        text-decoration: none;
-    }
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+footer a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 600px) {
     .container {
