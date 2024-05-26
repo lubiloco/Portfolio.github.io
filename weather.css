@@ -1,4 +1,4 @@
-﻿/* style.css */
+/* style.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -31,31 +32,49 @@ form {
     margin-bottom: 20px;
 }
 
-    form input[type="text"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px 0 0 4px;
-        flex: 1;
-    }
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    flex: 1;
+}
 
-    form button {
-        padding: 10px 20px;
-        border: none;
-        background-color: #333;
-        color: #fff;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-    }
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
 
-        form button:hover {
-            background-color: #555;
-        }
+form button:hover {
+    background-color: #555;
+}
 
 .weather-result {
     margin-top: 20px;
     display: none;
 }
 
-    .weather-result p {
-        margin: 10px 0;
-    }
+.weather-result p {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
