@@ -66,8 +66,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
     width: 100%;
-    margin-top: 20px;
+    bottom: 0;
 }
 
 footer a {
@@ -77,4 +78,14 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
 }
